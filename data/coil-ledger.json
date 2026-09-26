@@ -1,0 +1,233 @@
+{
+  "rolls": [
+    {
+      "id": "R-1790433656010",
+      "batchNo": "B2025-009",
+      "material": "麻线",
+      "totalLength": 2000,
+      "remainingLength": 2000,
+      "humidity": 10.5,
+      "expiryDate": "2026-08-01",
+      "status": "在库",
+      "currentRequisitionId": null,
+      "createdBy": "周宁",
+      "createdAt": "2026-09-26T14:40:56.010Z",
+      "logs": [
+        {
+          "at": "2026-09-26T14:40:56.010Z",
+          "step": "开卷登记",
+          "note": "批号 B2025-009，2000cm，湿度 10.5%，有效期至 2026-08-01"
+        }
+      ]
+    },
+    {
+      "id": "R-1790433655988",
+      "batchNo": "B2026-043",
+      "material": "蜡线",
+      "totalLength": 3000,
+      "remainingLength": 3000,
+      "humidity": 16.8,
+      "expiryDate": "2027-01-31",
+      "status": "在库",
+      "currentRequisitionId": null,
+      "createdBy": "周宁",
+      "createdAt": "2026-09-26T14:40:55.988Z",
+      "logs": [
+        {
+          "at": "2026-09-26T14:40:55.988Z",
+          "step": "开卷登记",
+          "note": "批号 B2026-043，3000cm，湿度 16.8%，有效期至 2027-01-31"
+        }
+      ]
+    },
+    {
+      "id": "R-001",
+      "batchNo": "B2026-041",
+      "material": "蜡线",
+      "totalLength": 6000,
+      "remainingLength": 5879.8,
+      "humidity": 11.5,
+      "expiryDate": "2027-06-30",
+      "status": "在库",
+      "currentRequisitionId": null,
+      "createdBy": "周宁",
+      "createdAt": "2026-09-20T08:00:00.000Z",
+      "logs": [
+        {
+          "at": "2026-09-20T08:00:00.000Z",
+          "step": "开卷登记",
+          "note": "批号 B2026-041，6000cm，湿度 11.5%，有效期至 2027-06-30"
+        },
+        {
+          "at": "2026-09-26T14:39:50.467Z",
+          "step": "预占",
+          "note": "Q-1790433590467 · 前桅侧支索 · 120cm"
+        },
+        {
+          "at": "2026-09-26T14:40:17.161Z",
+          "step": "核销",
+          "note": "Q-1790433590467 裁用 120.2cm，接头 1 个，余 5879.8cm"
+        }
+      ]
+    },
+    {
+      "id": "R-002",
+      "batchNo": "B2026-042",
+      "material": "麻线",
+      "totalLength": 4500,
+      "remainingLength": 4495,
+      "humidity": 12.1,
+      "expiryDate": "2027-03-31",
+      "status": "在库",
+      "currentRequisitionId": null,
+      "createdBy": "周宁",
+      "createdAt": "2026-09-21T08:00:00.000Z",
+      "logs": [
+        {
+          "at": "2026-09-21T08:00:00.000Z",
+          "step": "开卷登记",
+          "note": "批号 B2026-042，4500cm，湿度 12.1%，有效期至 2027-03-31"
+        },
+        {
+          "at": "2026-09-26T14:40:17.146Z",
+          "step": "预占",
+          "note": "Q-1790433590488 · 主桅帆索 · 9999cm"
+        },
+        {
+          "at": "2026-09-26T14:40:55.973Z",
+          "step": "核销",
+          "note": "Q-1790433590488 裁用 5cm，接头 0 个，余 4495cm"
+        }
+      ]
+    }
+  ],
+  "requisitions": [
+    {
+      "id": "Q-1790433656018",
+      "rollId": "R-1790433656010",
+      "position": "后帆缭绳",
+      "requiredLength": 150,
+      "operator": "李四",
+      "status": "待复核",
+      "ruleHits": [
+        {
+          "code": "EXPIRED",
+          "message": "已过有效期：2026-08-01"
+        }
+      ],
+      "cutting": null,
+      "createdAt": "2026-09-26T14:40:56.018Z",
+      "logs": [
+        {
+          "at": "2026-09-26T14:40:56.018Z",
+          "step": "停待复核",
+          "note": "已过有效期：2026-08-01；库存先不扣"
+        }
+      ]
+    },
+    {
+      "id": "Q-1790433656002",
+      "rollId": "R-1790433655988",
+      "position": "前帆缭绳",
+      "requiredLength": 200,
+      "operator": "周宁",
+      "status": "待复核",
+      "ruleHits": [
+        {
+          "code": "HUMIDITY_OUT",
+          "message": "湿度越限：16.8%，允许 8~14%"
+        }
+      ],
+      "cutting": null,
+      "createdAt": "2026-09-26T14:40:56.002Z",
+      "logs": [
+        {
+          "at": "2026-09-26T14:40:56.002Z",
+          "step": "停待复核",
+          "note": "湿度越限：16.8%，允许 8~14%；库存先不扣"
+        }
+      ]
+    },
+    {
+      "id": "Q-1790433590488",
+      "rollId": "R-002",
+      "position": "主桅帆索",
+      "requiredLength": 9999,
+      "operator": "王五",
+      "status": "已完成",
+      "ruleHits": [
+        {
+          "code": "LENGTH_SHORT",
+          "message": "长度不够：卷余 4500cm，需 9999cm"
+        }
+      ],
+      "cutting": {
+        "actualRemaining": 4495,
+        "joints": 0,
+        "expectedRemaining": -5499,
+        "deviation": 9994,
+        "cutBy": "王五",
+        "cutAt": "2026-09-26T14:40:17.173Z",
+        "status": "已确认",
+        "confirmedBy": "赵六",
+        "confirmedAt": "2026-09-26T14:40:55.973Z"
+      },
+      "createdAt": "2026-09-26T14:39:50.488Z",
+      "logs": [
+        {
+          "at": "2026-09-26T14:39:50.488Z",
+          "step": "停待复核",
+          "note": "长度不够：卷余 4500cm，需 9999cm；库存先不扣"
+        },
+        {
+          "at": "2026-09-26T14:40:17.146Z",
+          "step": "复核通过",
+          "note": "赵六 放行（LENGTH_SHORT）"
+        },
+        {
+          "at": "2026-09-26T14:40:17.173Z",
+          "step": "裁切待复核",
+          "note": "残长 4495cm，偏差 9994cm 超过 0.5cm，待他人复核后核销"
+        },
+        {
+          "at": "2026-09-26T14:40:55.973Z",
+          "step": "复核通过",
+          "note": "赵六 确认，按残长 4495cm 核销"
+        }
+      ]
+    },
+    {
+      "id": "Q-1790433590467",
+      "rollId": "R-001",
+      "position": "前桅侧支索",
+      "requiredLength": 120,
+      "operator": "周宁",
+      "status": "已完成",
+      "ruleHits": [],
+      "cutting": {
+        "actualRemaining": 5879.8,
+        "joints": 1,
+        "expectedRemaining": 5880,
+        "deviation": -0.2,
+        "cutBy": "周宁",
+        "cutAt": "2026-09-26T14:40:17.161Z",
+        "status": "已确认",
+        "confirmedBy": "系统(偏差≤0.5cm)",
+        "confirmedAt": "2026-09-26T14:40:17.161Z"
+      },
+      "createdAt": "2026-09-26T14:39:50.467Z",
+      "logs": [
+        {
+          "at": "2026-09-26T14:39:50.467Z",
+          "step": "预占",
+          "note": "前桅侧支索 预占 120cm，库存先不扣"
+        },
+        {
+          "at": "2026-09-26T14:40:17.161Z",
+          "step": "裁切核销",
+          "note": "残长 5879.8cm，接头 1 个，偏差 -0.2cm"
+        }
+      ]
+    }
+  ]
+}
